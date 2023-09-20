@@ -1,0 +1,19 @@
+const mongoose = require("mongoose");
+const salary = new mongoose.Schema({
+
+    id: Number,
+    month: Date,
+    emp_id: Number,
+    month_salary: Number,
+    attendance: Number,
+    calculated_salary: Number,
+
+    paid_on: Date,
+    created_at: Date,
+
+
+}, { timestamps: true })
+
+
+
+module.exports = mongoose.model("MEERN", salary);

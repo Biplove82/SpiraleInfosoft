@@ -14,7 +14,7 @@ const createuser = async function (req, res) {
 
 const getuserdata = async function (req, res) {
     let id = req.body
-    let data1 = await models.find(id);
+    let data1 = await models.find();
     res.send({ msg: data1 })
 }
 const log = async function (req, res) {
@@ -75,6 +75,7 @@ const login = async function (req, res) {
 const update = async function (req, res) {
 
     let id = req.params.id
+
     let updateuserdata = req.body
 
     try {
@@ -97,15 +98,14 @@ const deleteuser = async function (req, res) {
         if (!del) {
             res.status(404).json({ msg: "user not found" })
         } res.json({ msg: "user deleted sucessfully" })
-
-
-
     } catch (err) {
         res.status(500).json({ msg: "ERROR" })
 
     }
 
 }
+
+
 
 
 

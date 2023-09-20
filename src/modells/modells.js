@@ -16,8 +16,6 @@ const bookSchema = new mongoose.Schema({
     default: Date.now,
   },
 
-
-
   id_proof: { type: Number },
   email: String,
 
